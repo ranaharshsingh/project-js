@@ -12,13 +12,13 @@ form.addEventListener("submit",function(dets){
 
     let isvalid=true;
     if(!emailans){
-        document.querySelector("#emailError").textContent="email income";
+        document.querySelector("#emailError").textContent="email incomlete";
         document.querySelector("#emailError").style.display="initial";
         isvalid=false;
 
     }
     if(!passwordans){
-        document.querySelector("#passwordError").textContent="password income";
+        document.querySelector("#passwordError").textContent="password incomplete";
         document.querySelector("#passwordError").style.display="initial";
         isvalid=false;
 
