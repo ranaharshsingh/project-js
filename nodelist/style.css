@@ -1,0 +1,47 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+
+
+}
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+#elem{
+    height: 100px;
+    width: 70%;
+    padding: 20px;
+    background-color: #4b4848;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#elem h3{
+    font-size: 30px;
+    font-weight: 30px;
+    color: aliceblue;
+}
+
+#elem button{
+    background-color: blue;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+
+    color: white;
+
+}
