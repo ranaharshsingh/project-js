@@ -5,7 +5,7 @@ const reels = [
     isliked: false,
     commentcount: 18,
     caption: "Some moments are better left unplanned ✨",
-    video: "./reels/reels1.mp4",
+    video: "./reels/reels5.mp4",
     userprofile: "https://i.pravatar.cc/150?img=12",
     sharecount: 15,
     isfollowed: true
@@ -16,7 +16,7 @@ const reels = [
     isliked: true,
     commentcount: 64,
     caption: "Golden hour hits different 🌅",
-    video: "./reels/reels2.mp4",
+    video: "./reels/reels6.mp4",
     userprofile: "https://i.pravatar.cc/150?img=47",
     sharecount: 83,
     isfollowed: false
@@ -27,7 +27,7 @@ const reels = [
     isliked: false,
     commentcount: 31,
     caption: "Weekend mood activated 😎",
-    video: "./reels/reels3.mp4",
+    video: "./reels/reels7.mp4",
     userprofile: "https://i.pravatar.cc/150?img=33",
     sharecount: 42,
     isfollowed: true
@@ -39,7 +39,7 @@ const reels = [
     commentcount: 97,
     caption: "Coffee, music and a little peace ☕🎶",
 
-    video: "./reels/reels4.mp4",
+    video: "./reels/reels8.mp4",
 
     userprofile: "https://i.pravatar.cc/150?img=44",
     sharecount: 126,
@@ -51,7 +51,7 @@ const reels = [
     isliked: false,
     commentcount: 22,
     caption: "Keep going. Your time is coming. 🚀",
-    video: "./reels/reels3.mp4",
+    video: "./reels/reels6.mp4",
     
     userprofile: "https://i.pravatar.cc/150?img=11",
     sharecount: 29,
@@ -63,7 +63,7 @@ const reels = [
     isliked: false,
     commentcount: 73,
     caption: "A little sunshine makes everything better ☀️",
-    video: "./reels/reels1.mp4",
+    video: "./reels/reels5.mp4",
     
     userprofile: "https://i.pravatar.cc/150?img=49",
     sharecount: 91,
@@ -75,7 +75,7 @@ const reels = [
     isliked: true,
     commentcount: 16,
     caption: "Building things, breaking things, learning things 💻",
-    video: "./reels/reels3.mp4",
+    video: "./reels/reels8.mp4",
     
     userprofile: "https://i.pravatar.cc/150?img=13",
     sharecount: 18,
@@ -87,7 +87,7 @@ const reels = [
     isliked: true,
     commentcount: 142,
     caption: "Life lately has been pretty good ❤️",
-    video: "./reels/reels4.mp4",
+    video: "./reels/reels5.mp4",
     
     userprofile: "https://i.pravatar.cc/150?img=32",
     sharecount: 217,
@@ -99,7 +99,7 @@ const reels = [
     isliked: false,
     commentcount: 38,
     caption: "No destination, just enjoying the journey 🛣️",
-    video: "./reels/reels2.mp4",
+    video: "./reels/reels6.mp4",
     
     userprofile: "https://i.pravatar.cc/150?img=68",
     sharecount: 54,
@@ -111,7 +111,7 @@ const reels = [
     isliked: false,
     commentcount: 81,
     caption: "Collecting memories, not things 🌸",
-    video: "./reels/reels3.mp4",
+    video: "./reels/reels7.mp4",
     
     userprofile: "https://i.pravatar.cc/150?img=45",
     sharecount: 103,
