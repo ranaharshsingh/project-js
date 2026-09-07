@@ -16,6 +16,7 @@ body{
     width: 100%;
     background: linear-gradient(to right bottom,rgb(26, 26, 26),rgb(35, 35, 35),black);
     padding: 20px;
+    overflow: auto;
 }
 
 section{
@@ -24,4 +25,108 @@ section{
     background-color: rgb(18, 17, 17);
     border-radius: 10px;
     margin: auto;
+
+}
+.allreels{
+    height: 100%;
+    width: 100%;
+}
+.allreels{
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.allreels::-webkit-scrollbar{
+    display: none;
+}
+.reel{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+.reel video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.reel .bottom{
+    padding: 30px 20px;
+    background: linear-gradient(rgba(0, 0, 0,0),rgba(0, 0, 0,0.948));
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.bottom .user{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.bottom .user img{
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+ 
+.bottom .user button{
+    background-color: transparent;
+    padding: 2px 6px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 2px;
+    border: 1px solid white;
+    color: white;
+}
+.bottom .user h4{
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
+ .bottom h3{
+    color: #fff;
+    font-size: 10px;
+    font-weight: 500;
+}
+.right{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    color: white;
+    /* transform: translateX(100%);  */
+    width: 40px;
+    /* height: 100%; */
+    position: absolute;
+    right: 0;
+    bottom: 12%;
+    /* background: linear-gradient(to right, transparent,rgb(23, 23, 23)); */
+}
+.right i{
+    font-size: 18px;
+}
+
+.right h4{
+    cursor: pointer;
+}
+.right h6{
+    font-size: 15px;
+    font-weight: 400;
+}
+.right div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.love{
+    color: rgb(189, 4, 4);
 }
