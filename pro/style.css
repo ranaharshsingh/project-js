@@ -126,7 +126,16 @@ section{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    width: 20px;
+    cursor: pointer;     
 }
 .love{
     color: rgb(189, 4, 4);
 }
+
+.right > div h6{
+    pointer-events: none;
+}
+.right > div h6{
+    pointer-events: none;
+} 

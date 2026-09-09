@@ -119,9 +119,11 @@ const reels = [
   }
 ];
 
+let allReels=document.querySelector('.allreels');
 
-let sum=''
-reels.forEach(function(elem){
+function addData(){
+  let sum=''
+  reels.forEach(function(elem,idx){
     sum=sum+`  <div class="reel">
                 <video autoplay loop muted  src="${elem.video}"></video>
                 <div class="bottom">
@@ -133,7 +135,7 @@ reels.forEach(function(elem){
                    <h3>${elem.caption}</h3>
                 </div>    
                 <div class="right">
-                    <div class="like">
+                    <div id="${idx}" class="like">
                         <h4 class="like-icon icon">${elem.isliked?'<i class=" love ri-heart-3-fill"></i>':'<i class="ri-heart-3-line"></i>'}</h4>
                         <h6>${elem.likecount}</h6>
                     </div>
@@ -153,17 +155,30 @@ reels.forEach(function(elem){
                 </div>
             </div>            `
 })
-
-let allReels=document.querySelector('.allreels');
 allReels.innerHTML=sum;
+}
 
-console.log(sum)
+addData();
+// console.log(sum)
 
-let btn=document.querySelector('button');
-btn.addEventListener('click',function(){
-    if(btn.innerHTML=='Follow'){
-        btn.innerHTML='Unfollow';
+// let btn=document.querySelector('button');
+// btn.addEventListener('click',function(){
+//     if(btn.innerHTML=='Follow'){
+//         btn.innerHTML='Unfollow';
+//     }else{
+//         btn.innerHTML='Follow';
+//     }
+// })
+
+// console.log(allReels);
+allReels.addEventListener('click',function(dets){
+    if(!reels[dets.target.id].isliked){
+        reels[dets.target.id].likecount++
+        reels[dets.target.id].isliked=true
     }else{
-        btn.innerHTML='Follow';
+        reels[dets.target.id].likecount--
+        reels[dets.target.id].isliked=false
     }
-})
+
+    addData()
+});
