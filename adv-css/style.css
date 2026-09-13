@@ -6,10 +6,20 @@
 html,body{
     height: 100%;
     width: 100%;
+    background-color:black;
+}
+body{
+    background-image: url(./images/bg-img.jpg);
+    background-size: cover;
+}
+
+:root{
+    --x:400px;
+    --y:400px;
 }
 #box{
-    height: 400px;
-    width: 400px;
-    border: 1px solid white;
-    background: radial-gradient(300px at 100px 100px,red , blue);
+    height: 100%;
+    width: 100%;
+
+    background: radial-gradient(150px at var (--x) var(--y),rgba(255, 225, 225, 0) , rgb(0, 0, 0));
 }
