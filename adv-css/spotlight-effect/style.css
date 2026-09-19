@@ -21,5 +21,5 @@ body{
     height: 100%;
     width: 100%;
 
-    background: radial-gradient(150px at var (--x) var(--y),rgba(255, 225, 225, 0) , rgb(0, 0, 0));
+    background: radial-gradient(150px at var (--x) var(--y),rgba(248, 245, 245, 0) , rgb(0, 0, 0));
 }
