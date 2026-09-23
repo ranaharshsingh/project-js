@@ -13,10 +13,10 @@ body{
     overflow: hidden;
 }
 #main{
-    height: 400px;
-    width: 400px;
+    height: 200px;
+    width: 200px;
     margin: 20px;
-    position: relative;
+    position: fixed;
     transition: all cubic-bezier(0.19, 1, 0.22, 1);
     border: 2px solid brown;
     background-color: red;

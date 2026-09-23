@@ -9,6 +9,6 @@ let main=document.querySelector("#main");
 // });
 
 window.addEventListener("mousemove",function(dets){
-   main.style.left=dets.clientY + "px";
-   main.style.top= dets.clientX + "px";
+   main.style.left=dets.clientX + "px";
+   main.style.top= dets.clientY + "px";
 });

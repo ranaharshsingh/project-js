@@ -2,7 +2,7 @@ let arr=[
     {
         team:"rcb",
         primary:"red",
-        secondary:" green"
+        secondary:" gold"
     },
     {
         team:"mi",
