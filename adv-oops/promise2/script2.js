@@ -6,6 +6,7 @@ async function getWeather(city){
 
     let realdata= await row.json();
     console.log(realdata);
-
+    console.log(realdata.name);
+    console.log(realdata.main.humidity);
 }
 getWeather("ranchi");
