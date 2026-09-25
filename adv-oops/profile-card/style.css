@@ -14,8 +14,24 @@ html,body{
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 }
+#app{
+    height: 500px;
+    width: 300px;
+    position: relative;
+}
+#card , #searchbtn{
+    height: 500px;
+    width: 300px;
 
+}
+#bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
 #card{
     height: 500px;
     width: 300px;
@@ -27,6 +43,7 @@ html,body{
     /* justify-content: center; */
     /* align-items: center; */
     flex-direction: column;
+    
     
 }
 #username{
@@ -143,6 +160,7 @@ html,body{
 }
 #mutual-text{
     margin: 8px;
+    overflow-wrap: anywhere;
 }
 .img1{
     z-index: 5;
@@ -164,4 +182,150 @@ html,body{
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid rgba(34, 34, 33, 0.813);
+}
+#bottom{
+    height: 50px;
+    width: 100%;
+    margin-top: 65px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    border-top: 2px solid black;
+    background-color: rgba(0, 0, 0,);
+    gap: 22px;
+    
+}
+.homebtn i{
+    color: white;
+    background-color: black;
+}
+.reelsbtn i{
+    color: white;
+    background-color: black;
+}
+.chatbtn i{
+    color: white;
+    background-color: black;
+}
+.searchbtn i{
+    color: white;
+    background-color: black;
+}
+#bottom button{
+    background-color: black;
+    border: none;
+    padding: 0;
+}
+.profilebtn img{
+    height: 25px;
+    width: 25px;
+    object-fit: cover;
+    background: #000;
+    border-radius: 50%;
+    background-color: black;
+    color: black;
+}
+#searchbtnn{
+    height: 500px;
+    width: 300px;
+    padding-left: 16px;
+    border: 1px solid white;
+    background-color: rgba(18, 17, 17, 0.842);
+    display: none;
+}
+#searchinput{
+    height: 40px;
+    width: 95%;
+    padding-left:15px ;
+    margin-block: 10px;
+    border-radius: 20px;
+    background-color: black;
+    border: 2px solid white;
+    box-shadow: 2px black;
+    color: white;
+    cursor: pointer;
+}
+
+#chatsection{
+    height: 500px;
+    width: 300px;
+    color: white;
+    border: 1px solid white;
+    background-color: rgba(18, 17, 17, 0.842);
+    flex-wrap: nowrap;
+    display: none;
+}
+#chatsection h1{
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#chatsection h1 i{
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+#chatsection h1 span{
+    color: red;
+    
+}
+#chatsection input{
+    margin-left: 8px;
+}
+#chatsection #box{
+    height: 90px;
+    width: 100%;
+    background-color:rgba(18, 17, 17, 0.842);
+}
+#chatsection #msg{
+    height: 30px;
+    width: 100%;
+    background: none;
+    display: flex;
+    justify-content: space-between;
+}
+#chatsection #msg h5{
+    padding: 10px;
+}
+#chatsection #msg  #text-color{
+    color: rgba(13, 30, 91, 0.984);
+}
+.chat{
+    height: 48px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.chat img{
+    margin-left: 13px;
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+#dot{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+#person{
+    padding-inline: 10px;
+}
+#dot p:first-child{
+    font-size: 12px;
+    
+    
+}
+#dot p:last-child{
+    padding-left: 60px;
+    color: rgb(6, 6, 115);
+    
 }
