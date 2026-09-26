@@ -1,5 +1,8 @@
+
 let song=document.querySelector(".song");
 let audio=document.querySelector(".song audio");
+let postMusic=document.querySelector("#audio-post i")
+let dhun=document.querySelector("#audio-post audio");
 
 song.addEventListener("click",function(){
     // audio.play();
@@ -10,6 +13,17 @@ song.addEventListener("click",function(){
     }
 });
 
+postMusic.addEventListener('click',function(){
+    if(dhun.paused){
+        dhun.play();
+        postMusic.className="ri-volume-down-line"
+    }else{
+        dhun.pause();
+        postMusic.className="ri-volume-mute-line"
+    }
+
+
+});
 let object1={
     namee:"ranaharshkr",
     profile:"./images/rana.jpeg",
@@ -166,31 +180,18 @@ function showProfile (data){
     captions[2].innerText=data.caption3
     // captions[3].innerText=data.caption4
 }
-// let isharsh=false;
-// let isritika=false;
-// let israjput=false;
-// let arrow=document.querySelector("#icon");
-// arrow.addEventListener("click",()=>{
-//     if(isharsh===false){
-//         showProfile(object);
-//         isharsh=true;
-//     }else if(isharsh===true&&isritika===false){
-//         showProfile(object2);
-//         isritika=true;
-//     }  else {
-//         showProfile(object3)
-//         israjput=true;
-//     }
-    
-// });
-let countt=0;
+
+let countt=1;
 let arrow=document.querySelector("#icon");
 arrow.addEventListener('click',()=>{
-    showProfile(profiles[countt]);
-    countt++;
-    if(countt===profiles.length){
-        countt=0;
-    }
+    setTimeout(()=>{
+
+        showProfile(profiles[countt]);
+        countt++;
+        if(countt===profiles.length){
+            countt=0;
+        }
+    },300);
 
 });
 
@@ -199,7 +200,14 @@ let search=document.querySelector(".searchbtn");
 let searchcard=document.querySelector("#searchbtnn");
 let chat=document.querySelector("#chatsection");
 let chatbtn=document.querySelector(".chatbtn");
-
+let reel=document.querySelector(".reelsbtn");
+let section=document.querySelector("#reeel");
+let profilee=document.querySelector(".profilebtn");
+let home=document.querySelector("#home-page");
+let homebtn=document.querySelector(".homebtn");
+let first_page=document.querySelector("#starter");
+let load=document.querySelector("#starter button img");
+let butt=document.querySelector("#starter button ");
 
 let profiles=[object1,object2,object3,object4,object5,object6,object7,object8];
 let searchinput=document.querySelector("#searchinput");
@@ -213,24 +221,50 @@ searchinput.addEventListener('keypress',(ele)=>{
         });
         if(found){
             showProfile(found);
+            home.style.display="none"
             card.style.display="block";
             searchcard.style.display="none";
             chat.style.display="none";
+            section.style.display="none";
 
         }
     }
 });
-
-card.style.display="block";
+home.style.display="none"
+card.style.display="none";
 searchcard.style.display="none";
 chat.style.display="none";
+section.style.display="none";
+first_page.style.display="block";
 
 function hideAll(){
+    home.style.display="none"
     chat.style.display="none";
     searchcard.style.display="none";
     card.style.display="none";
+    section.style.display="none";
+    first_page.style.display="none";
 }
+load.addEventListener('click',()=>{
+    let h1=document.createElement("h1");
+    // button.style.display="flex";
+    butt.appendChild(h1);
+    // button.style.flexdirection="column";
+    
+    h1.style.color="white";
+    h1.innerHTML="Loading...";
+    h1.style.display="block";
+    setTimeout(()=>{
+        h1.style.display="none";
+        hideAll();
+        home.style.display="block";   
+    },1000);
+});
 
+homebtn.addEventListener("click",()=>{
+    hideAll();
+    home.style.display="block";
+});
 chatbtn.addEventListener('click',function(){
     hideAll();
     chat.style.display="block";
@@ -239,3 +273,12 @@ search.addEventListener("click",function(){
     hideAll();
     searchcard.style.display="block";
 });
+reel.addEventListener("click",function(){
+    hideAll();
+    section.style.display="block";
+});
+profilee.addEventListener("click",()=>{
+    hideAll();
+    card.style.display="block";
+    showProfile(profiles[0]);  
+})
