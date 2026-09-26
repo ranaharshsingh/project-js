@@ -281,4 +281,91 @@ profilee.addEventListener("click",()=>{
     hideAll();
     card.style.display="block";
     showProfile(profiles[0]);  
+});
+const reels = [
+  {
+    username: "aarav.sharma",
+    likecount: 358,
+    isliked: false,
+    commentcount: 18,
+    caption: "Some moments are better left unplanned ✨",
+    video: "./reels/reels1.mp4",
+    userprofile: "https://i.pravatar.cc/150?img=12",
+    sharecount: 15,
+    isfollowed: true
+  },
+  {
+    username: "riya.verma",
+    likecount: 1247,
+    isliked: true,
+    commentcount: 64,
+    caption: "Golden hour hits different 🌅",
+    video: "./reels/reels2.mp4",
+    userprofile: "https://i.pravatar.cc/150?img=47",
+    sharecount: 83,
+    isfollowed: false
+  },
+  {
+    username: "rohan.mehta",
+    likecount: 892,
+    isliked: false,
+    commentcount: 31,
+    caption: "Weekend mood activated 😎",
+    video: "./reels/reels3.mp4",
+    userprofile: "https://i.pravatar.cc/150?img=33",
+    sharecount: 42,
+    isfollowed: true
+  }
+];
+let allReels=document.querySelector('.allreels');
+
+function addData(){
+  let sum=''
+  reels.forEach(function(elem,idx){
+    sum=sum+`  <div class="reel">
+                <video autoplay loop muted  src="${elem.video}"></video>
+                <div class="bottom">
+                   <div class="user">
+                       <img src="${elem.userprofile}" alt="">
+                       <h4>${elem.username}</h4>
+                       <button>${elem.isfollowed?'Unfollow':'Follow'}</button>
+                   </div>
+                   <h3>${elem.caption}</h3>
+                </div>    
+                <div class="right">
+                    <div id="${idx}" class="like">
+                        <h4 class="like-icon icon">${elem.isliked?'<i class=" love ri-heart-3-fill"></i>':'<i class="ri-heart-3-line"></i>'}</h4>
+                        <h6>${elem.likecount}</h6>
+                    </div>
+                    <div class="comment">
+                        <h4 class="comment-icon icon"><i class="ri-chat-3-line"></i></h4>
+                        <h6>${elem.commentcount}</h6>
+                    </div>
+                      <div class="share">
+                        <h4 class="share-icon icon"><i class="ri-send-ins-line"></i></h4>
+                        <h6>${elem.sharecount}</h6>
+                    </div>
+                    <div class="menu">
+                        <h4 class="menu-icon icon"><i class="ri-more-2-fill"></i></h4>
+                         
+                    </div>
+
+                </div>
+            </div>            `
 })
+allReels.innerHTML=sum;
+}
+
+addData();
+
+allReels.addEventListener('click',function(dets){
+    if(!reels[dets.target.id].isliked){
+        reels[dets.target.id].likecount++
+        reels[dets.target.id].isliked=true
+    }else{
+        reels[dets.target.id].likecount--
+        reels[dets.target.id].isliked=false
+    }
+
+    addData()
+});
