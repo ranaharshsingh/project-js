@@ -477,6 +477,11 @@ section{
     position: relative;
     background-color: rgba(18, 17, 17, 0.842);
     display: block;
+
+    overflow-y: auto;
+}
+#home-scroll::-webkit-scrollbar{
+    display: none;
 }
 nav{
     padding: 15px;

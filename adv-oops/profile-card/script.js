@@ -369,3 +369,4 @@ allReels.addEventListener('click',function(dets){
 
     addData()
 });
+
