@@ -3,6 +3,18 @@ let song=document.querySelector(".song");
 let audio=document.querySelector(".song audio");
 let postMusic=document.querySelector("#audio-post i")
 let dhun=document.querySelector("#audio-post audio");
+let postVideo=document.querySelector("#audio-post video");
+let reelaudio=document.querySelector("#audio-post #reel-audio");
+
+postVideo.addEventListener('click',function(){
+    if(postVideo.paused){
+        postVideo.play();
+        // reelaudio.play();
+    }else{
+        postVideo.pause();
+        // reelaudio.pause();
+    }
+});
 
 song.addEventListener("click",function(){
     // audio.play();
@@ -369,4 +381,9 @@ allReels.addEventListener('click',function(dets){
 
     addData()
 });
+
+
+
+
+
 
